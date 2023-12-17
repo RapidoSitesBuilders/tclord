@@ -579,8 +579,7 @@ ol {
     border-radius: 30px;
     max-width: 100%;
 }
-.about-area .about-image-box .image-inner {
-}
+
 .about-area .about-image-box img {
     display: block;
     border-radius: 30px;
@@ -594,7 +593,7 @@ ol {
     background-image: url(../../../../uploads/2023/04/banner.jpg);
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
     
 }
 
@@ -1909,7 +1908,10 @@ ol {
         font-size: 18px;
     }
     .about-area .about-details .about-details-inner {
-        padding-top: 80px;
+        padding-top: 0;
+    } 
+    .about-area .about-details .about-details-inner h1{
+        font-size: 0;
     }
     .projects-area .container > .section-heading {
         display: flex;
