@@ -198,6 +198,7 @@ ol {
 .info-box {
     padding: 24px;
 }
+
 .credential-area .credential-sidebar .overlay-link,
 .contact-area .contact-form .overlay-link,
 .project-details-wrap .project-about-2 .overlay-link,
@@ -237,12 +238,13 @@ ol {
 }
 .info-box > img {
     display: block;
-    margin: auto auto 16px auto;
+    margin: auto auto auto auto;
 }
 .info-box .infos h4 {
     color: #BCBCBC;
     font-size: 12px;
     opacity: 0.5;
+    margin-top: 20px;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
