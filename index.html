@@ -65,6 +65,7 @@
       <link rel='shortlink' href='https://wpriverthemes.com/gridx/?p=926' />
       <link rel="alternate" type="application/json+oembed" href="https://wpriverthemes.com/gridx/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpriverthemes.com%2Fgridx%2Fabout-page%2F" />
       <link rel="alternate" type="text/xml+oembed" href="https://wpriverthemes.com/gridx/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpriverthemes.com%2Fgridx%2Fabout-page%2F&amp;format=xml" />
+      <link rel="stylesheet" href="assets/css/keen-slider.min.css"/>
       <meta name="generator" content="Redux 4.4.9" />
       <style>
          :root {
@@ -101,6 +102,7 @@
          .margin-0, .margin-0 .elementor-widget-wrap {
          margin: 0 !important;
          }
+         
       </style>
    </head>
    <body class="page-template page-template-page-templates page-template-main-about page-template-page-templatesmain-about-php page page-id-926 elementor-default elementor-kit-16 elementor-page elementor-page-926">
@@ -115,8 +117,33 @@
          <section class="about-area">
             <div class="container">
                <div data-aos="zoom-in">
-                  <div class="banner shadow-box">
-
+                  <div class="banner shadow-box" style="margin-bottom: 10px;">
+               
+                     <div id="my-keen-slider" class="keen-slider">
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/add.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/astra.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/blockx.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/exatech.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/paal.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/realio.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/rocketx.jpg" alt="" />
+                        </div>
+                        <div class="keen-slider__slide">
+                          <img src="assets/images/self.jpg" alt="" />
+                      </div>  
                   </div>
 
               </div>
@@ -396,5 +423,44 @@
          var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"THIS IS A the first slide","a11yCarouselLastSlideMessage":"THIS IS A the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.17.3","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"e_swiper_latest":true,"landing-pages":true},"urls":{"assets":"https:\/\/wpriverthemes.com\/gridx\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":926,"title":"ABOUT%20PAGE%20%E2%80%93%20Gridx%20%E2%80%93%20WordPress%20Theme","excerpt":"","SAMPLE ONLYImage":false}};
       </script>
       <script src="../wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3" id="elementor-frontend-js"></script>
+      <script src="assets/js/keen-slider.min.js"></script>
+      <script>
+        var animation = { duration: 25000, easing: (t) => t };
+  
+        var slider = new KeenSlider("#my-keen-slider", {
+          loop: true,
+          renderMode: "performance",
+          drag: false,
+          slides: {
+            perView: "auto",
+            spacing: 15,
+          },
+          created(s) {
+            s.moveToIdx(5, true, animation);
+          },
+          updated(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation);
+          },
+          animationEnded(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation);
+          },
+        });
+        
+
+
+        let copyText = document.querySelector(".copy-text");
+        copyText.querySelector("button").addEventListener("click", function(){
+         let input = copyText.querySelector("input.text");
+             input.select();
+             document.execCommand("copy");
+             copyText.classList.add("active");
+             window.getSelection().removeAllRanges();
+
+             setTimeout(function(){
+                 copyText.classList.remove("active");
+             },2500);
+
+        });
+      </script>
    </body>
 </html>
