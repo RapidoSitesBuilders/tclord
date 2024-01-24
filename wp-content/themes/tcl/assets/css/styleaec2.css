@@ -565,10 +565,32 @@ ol {
     color: #fff;
     font-weight: 400;
 }
-.about-area .about-credentials-wrap .banner .marquee img {
-    display: inline-block;
-    margin: 0 5px;
-}
+.about-area .banner {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    animation: changeImage 80s infinite; 
+    margin-bottom: 10px;
+ }
+
+ /* Define the keyframe animations for changing the background image */
+ @keyframes changeImage {
+    0%, 100% { background-image: url('../../../../../assets/images/add.jpg'); }
+    12.5% { background-image: url('../../../../../assets/images/astra.jpg'); }
+    25% { background-image: url('../../../../../assets/images/blockx.jpg'); }
+    37.5% { background-image: url('../../../../../assets/images/exatech.jpg'); }
+    50% { background-image: url('../../../../../assets/images/paal.jpg'); }
+    62.5% { background-image: url('../../../../../assets/images/realio.jpg'); }
+    75% { background-image: url('../../../../../assets/images/rocketx.jpg'); }
+    87.5% { background-image: url('../../../../../assets/images/self.jpg'); }
+ }
+ @media (max-width: 768px) {
+   .about-area .banner {
+      height: 100px; /* Adjust the height for smaller screens */
+    }
+  }
+
 .about-area .about-credentials-wrap > .gx-row > * {
     flex: 1;
     width: 50%;
@@ -590,12 +612,16 @@ ol {
     flex: 1;
 }
 .about-area .about-details .about-details-inner {
-    padding: 115px 60px 30px 30px;
+    padding: 126px 60px 30px 30px;
     position: relative;
     background-image: url(../../../../uploads/2023/04/banner.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    
+}
+
+.about-area {
     
 }
 
