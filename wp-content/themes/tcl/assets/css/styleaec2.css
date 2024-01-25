@@ -550,17 +550,6 @@ ol {
     height: 19px;
     overflow-x: hidden;
 }
-
-.marquee div {
-    
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    font-size: 12px;
-
-    animation: marquee 8s linear infinite;
-}
-
 .about-area .about-credentials-wrap .banner .marquee b {
     color: #fff;
     font-weight: 400;
@@ -569,7 +558,31 @@ ol {
     min-width: 500px;
     height: auto;
     padding: 10px 30px 10px 30px;
+  } 
+  
+
+  .about-area .banner .keen-slider__slide {
+    min-width: 500px;
+    height: auto;
+    padding: 10px 30px 10px 30px;
   }
+
+  .about-area .banner .keen-slider__slide img{
+    max-width: 100%;
+    height: 75px;
+  }
+
+  @media (max-width: 768px) {
+    .about-area .banner .keen-slider__slide {
+        min-width: 500px;
+        height: auto;
+        padding: 5px 10px 5px 10px;
+      }
+    .about-area .banner .keen-slider__slide img{
+        max-width: 100%;
+        height: 75px;
+    }
+}
 
 .about-area .about-credentials-wrap > .gx-row > * {
     flex: 1;
